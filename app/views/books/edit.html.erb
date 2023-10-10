@@ -1,20 +1,20 @@
-<h1 id="head-title">Editing Book</h1>
-<%= form_with model: @book do |f| %>
-
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-
-  <h4>Body</h4>
-  <%= f.text_area :body %>
-
-  <%= f.submit 'Create Book' %>
-
-<% end %>
-
-  <span>
-    <%= link_to 'Show', "/books/#{@book.id}" %>
-  </span>
-
-  <span>
-    <%= link_to 'Back', "/books" %>
-  </span>
+<main id="main">
+  <h1 id="head-title">Editing Book</h1>
+  <%= form_with model: @book do |f| %>
+  <div id="new-wrap">
+    <div>
+      <p>Title</p>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <p>Body</p>
+      <%= f.text_area :body %>
+    </div>
+    <div>
+      <%= f.submit 'Update Book' %>
+    </div>
+  </div>
+  <% end %>
+    <p><%= link_to 'Show', "/books/#{@book.id}" %> |
+    <%= link_to 'Back', "/books" %></p>
+</main>

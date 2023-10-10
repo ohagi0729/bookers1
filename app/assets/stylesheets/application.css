@@ -17,10 +17,67 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
+  color: #333;
   box-sizing: border-box;
 }
 
+#top-title {
+  font-size: 26px;
+  margin-bottom: 33px;
+}
+
+#top-title span {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 33px;
+}
+
 #head-title {
-  font-size: 2em;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+#main {
+  margin: 33px;
+}
+
+#books-table td {
+  padding: 1px 5px 7px;
+}
+
+#text-wrap {
+  margin-left: 33px;
+}
+
+#text-wrap p,#text-wrap a {
+  margin-bottom: 33px;
+}
+
+#text-wrap span {
+  font-weight: bold;
+}
+
+#new-title {
+  font-size: 20px;
+  margin: 18px 0;
+}
+
+#new-wrap {
+  display: block;
+}
+
+#new-wrap div {
+  margin-bottom: 10px;
+}
+
+#new-wrap input,#new-wrap textarea {
+  padding: 1px 2px;
+}
+
+#flash-message {
+  margin-bottom: 33px;
+  color: #32CD32;
 }
