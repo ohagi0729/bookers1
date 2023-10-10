@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-def index
+  def index
     @book = Book.new
     @book = Book.all
   end
@@ -7,7 +7,7 @@ def index
   def create
     book = Book.new(book_params)
     book.save
-    redirect_to '/books/:id(.:format)'
+    redirect_to book_path(book.id)
   end
 
   def show

@@ -1,4 +1,4 @@
-<h1>Editing Book</h1>
+<h1 id="head-title">Editing Book</h1>
 <%= form_with model: @book do |f| %>
 
   <h4>Title</h4>
@@ -10,3 +10,11 @@
   <%= f.submit 'Create Book' %>
 
 <% end %>
+
+  <span>
+    <%= link_to 'Show', "/books/#{@book.id}" %>
+  </span>
+
+  <span>
+    <%= link_to 'Back', "/books" %>
+  </span>

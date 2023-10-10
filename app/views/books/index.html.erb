@@ -1,4 +1,4 @@
-<h1>Books</h1>
+<h1 id="head-title">Books</h1>
 <% @book.each do |book| %>
 
   <p>Title</p>
@@ -12,11 +12,11 @@
   </span>
 
   <span>
-    <%= link_to 'Edit', edit_book_path(@book.id) %>
+    <%= link_to 'Edit', edit_book_path(book.id) %>
   </span>
 
   <span>
-    <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+    <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
   </span>
 
 <% end %>
