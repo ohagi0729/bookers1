@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @book.each do |book| %>
+      <% @books.each do |book| %>
       <tr>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
@@ -23,14 +23,16 @@
 
   <h2 id="new-title">New book</h2>
 
-  <% if @book.errors.any? %>
-    <%= @book.errors.count %>errors prohibited this book from being saved:
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
+    <% if @book.errors.any? %>
+    <div id="validation">
+      <p><%= @book.errors.count %>errors prohibited this book from being saved:</p>
+      <ul id="text-wrap">
+        <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
     <% end %>
-    </ul>
-  <% end %>
 
     <%= form_with model: @book, url: '/books', method: :post do |f| %>
     <div id="new-wrap">

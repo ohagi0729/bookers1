@@ -79,5 +79,24 @@
 
 #flash-message {
   margin-bottom: 33px;
-  color: #32CD32;
+  color: green;
+}
+
+#validation {
+  width: 450px;
+  margin-bottom: 20px;
+  border: 2px solid red;
+  background-color: #f0f0f0;
+}
+
+#validation p {
+  padding: 5px 5px 5px 15px;
+  background-color: red;
+  font-weight: bold;
+  color: #fff
+}
+
+#validation ul {
+  margin :33px;
+  padding-left: 40px;
 }

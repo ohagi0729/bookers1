@@ -1,5 +1,17 @@
 <main id="main">
   <h1 id="head-title">Editing Book</h1>
+
+  <% if @book.errors.any? %>
+  <div id="validation">
+    <p><%= @book.errors.count %>errors prohibited this book from being saved:</p>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
   <%= form_with model: @book do |f| %>
   <div id="new-wrap">
     <div>
